@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: aaed3cdd353956deb6f4051b27e7bb4601890d4e
+  branch: master
+  specs:
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +64,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    autoprefixer-rails (9.8.6.1)
+      execjs
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -65,7 +75,10 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     erubi (1.9.0)
+    execjs (2.7.0)
     ffi (1.13.1)
+    font-awesome-sass (5.6.1)
+      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
@@ -158,6 +171,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    simple_form (5.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -196,8 +212,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
+  faker!
+  font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 3.7)
@@ -205,6 +224,7 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails (= 4.0.0.beta3)
   sass-rails (>= 6)
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

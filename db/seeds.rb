@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts 'Cleaning database...'
+Restaurant.destroy_all
+puts 'Creating some restaurants...'
+
+5.times do
+  Restaurant.create(
+    name: Faker::Company.name,
+    address: Faker::Address.street_address,
+    category: Restaurant::CATEGORIES.sample,
+    phone_number: Faker::PhoneNumber
+  )
+end
+puts 'Created'
